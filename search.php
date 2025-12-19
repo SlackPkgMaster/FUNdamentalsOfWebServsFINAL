@@ -2,7 +2,7 @@
     $server = "localhost";
     $username = "php";
     $password = "Ross1234";
-    $database = "search";
+    $database = "order_info";
 
     $conn = mysqli_connect($server, $username, $password, $database);
 
@@ -14,7 +14,7 @@
     $search = htmlspecialchars($_GET["q"]);
 
     $sql_insert = "insert into search (ip,search)
-        values ({$IP},{$search});";
+        values ('{$IP}','{$search}');";
 
     $sql_insert_result = mysqli_query($conn,$sql_insert);
 
